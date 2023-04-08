@@ -1,3 +1,4 @@
+import { Head } from "$fresh/runtime.ts";
 import { Handlers, PageProps } from '$fresh/server.ts'
 import StockList from '../islands/StockList.tsx'
 import Header from "../components/Header.tsx"
@@ -26,8 +27,11 @@ export default function Page({ data }: PageProps) {
   }
   return (
     <>
+      <Head>
+        <title>新潟開発</title>
+      </Head>
       <Header />
-      <div class="flex justify-center max-w-7xl mx-auto">
+      <div class="flex justify-center max-w-5xl mx-auto">
         <main class="mx-5">
           <StockList data={data['items']} />
         </main>

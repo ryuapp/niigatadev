@@ -11,13 +11,13 @@ export default function StockList({ data }: PageProps){
   for (const stock of data) {
     stockList.unshift(
     <div class="px-3 py-2 border w-60 col-span-1">
-      <div class="md:">{stock["company_name"]}</div>
+      <div class="font-bold">{stock["company_name"]}</div>
       <div class="flex justify-between">
         <div>{stock["ticker_symbol"]}</div>
-        <div>CITY</div>
+        <div class="text-gray-500">CITY</div>
       </div>
     </div>);
   }
 
-  return <div class="mt-10 grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 col-auto gap-2">{stockList}</div>
+  return <div class="mt-10 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 col-auto gap-2">{stockList}</div>
 }
