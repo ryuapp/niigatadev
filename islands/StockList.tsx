@@ -10,7 +10,7 @@ export default function StockList({ data }: PageProps){
   
   for (const stock of data) {
     stockList.unshift(
-    <div class="px-3 py-2 border w-60 col-span-1">
+    <div class="px-3 py-2 border">
       <div class="font-bold">{stock["company_name"]}</div>
       <div class="flex justify-between">
         <div>{stock["ticker_symbol"]}</div>
@@ -19,5 +19,5 @@ export default function StockList({ data }: PageProps){
     </div>);
   }
 
-  return <div class="mt-10 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 col-auto gap-2">{stockList}</div>
+  return <div class="mt-10 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-2">{stockList}</div>
 }
