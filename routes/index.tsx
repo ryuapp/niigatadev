@@ -9,7 +9,7 @@ export default function Home() {
       <Header />
       <div class="mt-10 px-10 mx-auto max-w-7xl">
         <h1 class="text-3xl mb-5 font-bold">データベース</h1>
-        <a class="underline text-blue-600" href="/stocks">新潟県の上場企業一覧</a>
+        <a class="px-3 py-2 border w-60 font-bold transition hover:bg-gray-200 active:bg-gray-300" href="/stocks">新潟県の上場企業</a>
       </div>
     </>
   );
