@@ -1,12 +1,12 @@
-import { Head } from "$fresh/runtime.ts";
+import { Head } from '$fresh/runtime.ts'
 import { Handlers, PageProps } from '$fresh/server.ts'
 import StockList from '../islands/StockList.tsx'
-import Header from "../components/Header.tsx"
+import Header from '../components/Header.tsx'
 
 export const handler: Handlers = {
   async GET(_req, ctx) {
-    const URL = Deno.env.get('YOUR_CDN_API_URL');
-    const token = Deno.env.get('YOUR_CDN_API_TOKEN');
+    const URL = Deno.env.get('YOUR_CDN_API_URL')
+    const token = Deno.env.get('YOUR_CDN_API_TOKEN')
     const resp = await fetch(URL, {
       method: 'GET',
       headers: {
@@ -14,16 +14,16 @@ export const handler: Handlers = {
         'Content-Type': 'application/json',
       },
     }).then(function (response) {
-      return response.json();
-    });
+      return response.json()
+    })
 
-    return ctx.render(resp);
+    return ctx.render(resp)
   },
-};
+}
 
 export default function Page({ data }: PageProps) {
   if (data['status']) {
-    return <h1>{data['status']} Error</h1>;
+    return <h1>{data['status']} Error</h1>
   }
   return (
     <>
@@ -31,12 +31,12 @@ export default function Page({ data }: PageProps) {
         <title>新潟開発</title>
       </Head>
       <Header />
-      <div class="mt-10 max-w-5xl mx-auto">
-        <main class="mx-5">
-          <h1 class="text-3xl mb-5 font-bold">新潟県の上場企業</h1>
+      <div class='mt-10 max-w-5xl mx-auto'>
+        <main class='mx-5'>
+          <h1 class='text-3xl mb-5 font-bold'>新潟県の上場企業</h1>
           <StockList data={data['items']} />
         </main>
       </div>
     </>
-  );
+  )
 }
