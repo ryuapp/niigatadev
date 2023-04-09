@@ -1,22 +1,26 @@
 import { PageProps } from '$fresh/server.ts'
+import { StockCard } from '../components/StockCard.tsx'
 
 export default function StockList({ data }: PageProps) {
   const stockList = []
-  data.sort(function (a, b) {
-    if (a['_sys']['customOrder'] > b['_sys']['customOrder']) return -1
-    if (a['_sys']['customOrder'] < b['_sys']['customOrder']) return 1
-    return 0
-  })
+  data.sort(
+    function (
+      a: { [x: string]: { [x: string]: number } },
+      b: { [x: string]: { [x: string]: number } },
+    ) {
+      if (a['_sys']['customOrder'] > b['_sys']['customOrder']) return -1
+      if (a['_sys']['customOrder'] < b['_sys']['customOrder']) return 1
+      return 0
+    },
+  )
 
   for (const stock of data) {
     stockList.unshift(
-      <div class='px-3 py-2 border'>
-        <div class='font-bold'>{stock['company_name']}</div>
-        <div class='flex justify-between'>
-          <div>{stock['ticker_symbol']}</div>
-          <div class='text-gray-500'>{stock['company_city']}</div>
-        </div>
-      </div>,
+      <StockCard
+        name={stock['company_name']}
+        ticker={stock['ticker_symbol']}
+        city={stock['company_city']}
+      />,
     )
   }
 
