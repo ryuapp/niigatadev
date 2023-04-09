@@ -19,5 +19,5 @@ export default function StockList({ data }: PageProps){
     </div>);
   }
 
-  return <div class="mt-10 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-2">{stockList}</div>
+  return <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-2">{stockList}</div>
 }

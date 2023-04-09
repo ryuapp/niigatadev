@@ -31,8 +31,9 @@ export default function Page({ data }: PageProps) {
         <title>新潟開発</title>
       </Head>
       <Header />
-      <div class="max-w-5xl mx-auto">
+      <div class="mt-10 max-w-5xl mx-auto">
         <main class="mx-5">
+          <h1 class="text-3xl mb-5 font-bold">新潟県の上場企業</h1>
           <StockList data={data['items']} />
         </main>
       </div>
