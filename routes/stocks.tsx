@@ -2,21 +2,11 @@ import { Head } from '$fresh/runtime.ts'
 import { Handlers, PageProps } from '$fresh/server.ts'
 import StockList from '../islands/StockList.tsx'
 import Header from '../components/Header.tsx'
+import { getNewtJson } from '../utils/newt.ts'
 
 export const handler: Handlers = {
   async GET(_req, ctx) {
-    const URL = Deno.env.get('YOUR_CDN_API_URL')
-    const token = Deno.env.get('YOUR_CDN_API_TOKEN')
-    const resp = await fetch(URL, {
-      method: 'GET',
-      headers: {
-        Authorization: 'Bearer ' + token,
-        'Content-Type': 'application/json',
-      },
-    }).then(function (response) {
-      return response.json()
-    })
-
+    const resp = await getNewtJson('stocks', 'stock')
     return ctx.render(resp)
   },
 }

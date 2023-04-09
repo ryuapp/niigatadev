@@ -28,7 +28,7 @@ export default function StockList({ data }: PageProps) {
       name='企業名'
       ticker='証券コード'
       city='市町村'
-    />
+    />,
   )
 
   return (
