@@ -14,12 +14,14 @@ export default function Home() {
             <a
               class='px-3 py-2 border font-bold transition hover:bg-zinc-200 active:bg-zinc-300 active:scale-95'
               href='/population'
+              style='-webkit-user-drag: none'
             >
               市町村別人口総数
             </a>
             <a
               class='px-3 py-2 border font-bold transition hover:bg-zinc-200 active:bg-zinc-300 active:scale-95'
               href='/stocks'
+              style='-webkit-user-drag: none'
             >
               新潟県の上場企業
             </a>
