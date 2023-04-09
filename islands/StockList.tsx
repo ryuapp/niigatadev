@@ -14,7 +14,7 @@ export default function StockList({ data }: PageProps) {
         <div class='font-bold'>{stock['company_name']}</div>
         <div class='flex justify-between'>
           <div>{stock['ticker_symbol']}</div>
-          <div class='text-gray-500'>CITY</div>
+          <div class='text-gray-500'>{stock['company_city']}</div>
         </div>
       </div>,
     )
