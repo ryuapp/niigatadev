@@ -4,7 +4,7 @@
 /// <reference lib="dom.asynciterable" />
 /// <reference lib="deno.ns" />
 
-import { start } from '$fresh/server.ts'
+import { RenderFunction, start } from '$fresh/server.ts'
 import manifest from './fresh.gen.ts'
 
 import twindPlugin from 'twind_fresh_plugin/twind.ts'
