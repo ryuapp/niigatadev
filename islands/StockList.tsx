@@ -23,6 +23,13 @@ export default function StockList({ data }: PageProps) {
       />,
     )
   }
+  stockList.unshift(
+    <StockCard
+      name='企業名'
+      ticker='証券コード'
+      city='市町村'
+    />
+  )
 
   return (
     <div class='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-2'>
