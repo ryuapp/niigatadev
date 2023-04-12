@@ -1,7 +1,7 @@
 interface StockProps {
-  name: Text
-  ticker: Text
-  city: Text
+  name: string
+  ticker: string
+  city: string
 }
 export function StockCard({ name, ticker, city }: StockProps) {
   return (
