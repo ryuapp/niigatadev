@@ -3,6 +3,7 @@ import { Handlers, PageProps } from '$fresh/server.ts'
 import PopulationList from '../islands/CityList.tsx'
 import Header from '../components/Header.tsx'
 import { getNewtJson } from '../utils/newt.ts'
+import Footer from '../components/Footer.tsx'
 
 export const handler: Handlers = {
   async GET(_req, ctx) {
@@ -27,6 +28,7 @@ export default function Page({ data }: PageProps) {
           <PopulationList data={data['items']} />
         </main>
       </div>
+      <Footer />
     </>
   )
 }

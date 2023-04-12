@@ -1,5 +1,7 @@
 import { Head } from '$fresh/runtime.ts'
+import Footer from '../components/Footer.tsx'
 import Header from '../components/Header.tsx'
+
 export default function Home() {
   return (
     <>
@@ -9,7 +11,7 @@ export default function Home() {
       <Header />
       <div class='mt-10 mx-auto max-w-5xl'>
         <main class='mx-5'>
-          <h2 class='text-3xl mb-5 font-bold'>データベース</h2>
+          <h2 class='text-3xl font-bold mb-1'>データベース</h2>
           <div class='flex gap-2'>
             <a
               class='px-3 py-2 border font-bold transition hover:bg-zinc-200 active:bg-zinc-300 active:scale-95'
@@ -28,6 +30,7 @@ export default function Home() {
           </div>
         </main>
       </div>
+      <Footer />
     </>
   )
 }

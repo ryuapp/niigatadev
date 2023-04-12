@@ -1,4 +1,5 @@
 import { UnknownPageProps } from '$fresh/server.ts'
+import Footer from '../components/Footer.tsx'
 import Header from '../components/Header.tsx'
 
 export default function NotFoundPage({ url }: UnknownPageProps) {
@@ -11,6 +12,7 @@ export default function NotFoundPage({ url }: UnknownPageProps) {
           <p>ページが見つかりません。</p>
         </main>
       </div>
+      <Footer />
     </>
   )
 }
