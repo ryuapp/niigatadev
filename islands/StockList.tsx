@@ -1,7 +1,7 @@
-import { PageProps } from '$fresh/server.ts'
 import { StockCard } from '../components/StockCard.tsx'
 
-export default function StockList({ data }: PageProps) {
+// deno-lint-ignore no-explicit-any
+export default function StockList({ data }: any) {
   const stockList = []
   data.sort(
     function (

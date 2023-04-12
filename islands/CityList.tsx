@@ -1,7 +1,7 @@
-import { PageProps } from '$fresh/server.ts'
 import { PopulationCard } from '../components/CityCard.tsx'
 
-export default function PopulationList({ data }: PageProps) {
+// deno-lint-ignore no-explicit-any
+export default function PopulationList({ data }: any) {
   const stockList = []
   data.sort(
     function (

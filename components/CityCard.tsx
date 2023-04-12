@@ -1,6 +1,6 @@
 interface PopulationProps {
-  name: Text
-  population: Text
+  name: string
+  population: string
 }
 export function PopulationCard({ name, population }: PopulationProps) {
   return (
