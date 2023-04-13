@@ -1,6 +1,7 @@
 {
   "imports": {
     "npm/": "https://unpkg.com/",
+    "newt-client-js": "npm:newt-client-js@3.2.4",
     "$fresh/": "https://deno.land/x/fresh@1.1.5/",
     "preact": "https://esm.sh/preact@10.13.1",
     "preact/": "https://esm.sh/preact@10.13.1/",

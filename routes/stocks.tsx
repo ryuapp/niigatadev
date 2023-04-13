@@ -2,12 +2,12 @@ import { Head } from '$fresh/runtime.ts'
 import { Handlers, PageProps } from '$fresh/server.ts'
 import StockList from '../islands/StockList.tsx'
 import Header from '../components/Header.tsx'
-import { getNewtJson } from '../utils/newt.ts'
+import { getContents } from '../utils/newt.ts'
 import Footer from '../components/Footer.tsx'
 
 export const handler: Handlers = {
   async GET(_req, ctx) {
-    const resp = await getNewtJson('stocks', 'stock')
+    const resp = await getContents('stocks', 'stock')
     return ctx.render(resp)
   },
 }
