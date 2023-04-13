@@ -294,6 +294,7 @@
     "https://esm.sh/v115/function-bind@1.1.1/deno/function-bind.mjs": "85ea0ce74df7d28231e143fc7c177e6933ab9a86ea61b5675d4eea6c62de01df",
     "https://esm.sh/v115/get-intrinsic@1.2.0/deno/get-intrinsic.mjs": "d9c9865c69889e5f86ae9bce2daf22fdd2f4ce4f54dcebb669f118e650b46f93",
     "https://esm.sh/v115/is-retry-allowed@2.2.0/deno/is-retry-allowed.mjs": "ba7f2177a1390ba7ff13bc109f5e34b45cb80db0354eaafff4b0fcfa136aa727",
+    "https://esm.sh/v115/newt-client-js@3.2.4": "e4e3f780f774778a0ca0dd53c767fb130782efd79f147535fdb9a438d289dd0f",
     "https://esm.sh/v115/newt-client-js@3.2.4/deno/newt-client-js.mjs": "4077db1ed85ae662b38b6d4e3483b1eff3fc18ca7e109aa1ca0098cd6de31961",
     "https://esm.sh/v115/newt-client-js@3.2.4/dist/types/createClient.d.ts": "ea0574a57efce36505cf91e57bc0cda9386d6e0f318d8852bd87fccdc0e26a15",
     "https://esm.sh/v115/newt-client-js@3.2.4/dist/types/index.d.ts": "c7ea2c764d6b82b2707c7147c4bdd38ff5edb135f57fd9821cfe47eb494ced8b",
