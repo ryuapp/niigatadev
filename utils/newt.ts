@@ -1,8 +1,8 @@
 import { createClient } from 'newt-client-js'
 
 const client = createClient({
-  spaceUid: Deno.env.get('YOUR_SPACE_UID'),
-  token: Deno.env.get('YOUR_CDN_API_TOKEN'),
+  spaceUid: Deno.env.get('YOUR_SPACE_UID')!,
+  token: Deno.env.get('YOUR_CDN_API_TOKEN')!,
   apiType: 'cdn', // "cdn" or "api"
 })
 
