@@ -1,8 +1,27 @@
 import { Head } from '$fresh/runtime.ts'
-import Footer from '../components/Footer.tsx'
 import Header from '../components/Header.tsx'
+import Footer from '../components/Footer.tsx'
+import { Handlers, PageProps } from '$fresh/server.ts'
+import { ArticleCard } from '../components/ArticleCard.tsx'
+import { client } from '../utils/newt.ts'
 
-export default function Home() {
+export const handler: Handlers = {
+  async GET(_req, ctx) {
+    const resp = await client.getContents({
+      appUid: 'news',
+      modelUid: 'article',
+      query: {
+        select: ['title'],
+        limit: 3,
+      },
+    })
+    return ctx.render(resp)
+  },
+}
+
+export default function Home({ data }: PageProps) {
+  const articles = data['items']
+
   return (
     <>
       <Head>
@@ -11,7 +30,12 @@ export default function Home() {
       <Header />
       <div class='mt-10 mx-auto max-w-5xl'>
         <main class='mx-5'>
+          <h2 class='text-3xl font-bold mb-1'>ニュース</h2>
+          <div class='mb-5'>
+            {articles.map((article: { title: string }) => <ArticleCard title={article.title} />)}
+          </div>
           <h2 class='text-3xl font-bold mb-1'>データベース</h2>
+          <p class='text-zinc-800 mb-5'>新潟県のオープンデータを中心としたデータベースです。</p>
           <div class='flex gap-2'>
             <a
               class='px-3 py-2 border font-bold transition hover:bg-zinc-200 active:bg-zinc-300 active:scale-95'
