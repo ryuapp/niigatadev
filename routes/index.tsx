@@ -11,7 +11,7 @@ export const handler: Handlers = {
       appUid: 'news',
       modelUid: 'article',
       query: {
-        select: ['title', 'slug'],
+        select: ['title', 'type', 'slug'],
         limit: 3,
       },
     })
@@ -32,8 +32,8 @@ export default function Home({ data }: PageProps) {
         <main class='mx-5'>
           <h2 class='text-3xl font-bold mb-1'>ニュース</h2>
           <div class='mb-5'>
-            {articles.map((article: { title: string; slug: string }) => (
-              <ArticleCard title={article.title} slug={article.slug} />
+            {articles.map((article: { title: string; type: string; slug: string }) => (
+              <ArticleCard title={article.title} type={article.type} slug={article.slug} />
             ))}
           </div>
           <h2 class='text-3xl font-bold mb-1'>データベース</h2>
