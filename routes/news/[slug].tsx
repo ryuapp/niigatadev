@@ -49,7 +49,7 @@ export default function Article(props: PageProps) {
       <Header />
       <div class='mt-10 mx-auto max-w-5xl'>
         <main class='mx-5'>
-          <h1 class='text-3xl font-bold mb-1'>{title}</h1>
+          <h1 class='text-4xl font-bold mb-5'>{title}</h1>
           <div class='text-zinc-800 mb-5' dangerouslySetInnerHTML={{ __html: body }}></div>
         </main>
       </div>

@@ -30,13 +30,13 @@ export default function Home({ data }: PageProps) {
       <Header />
       <div class='mt-10 mx-auto max-w-5xl'>
         <main class='mx-5'>
-          <h2 class='text-3xl font-bold mb-1'>ニュース</h2>
+          <h2 class='text-4xl font-bold mb-2'>ニュース</h2>
           <div class='mb-5'>
             {articles.map((article: { title: string; type: string; slug: string }) => (
               <ArticleCard title={article.title} type={article.type} slug={article.slug} />
             ))}
           </div>
-          <h2 class='text-3xl font-bold mb-1'>データベース</h2>
+          <h2 class='text-4xl font-bold mb-1'>データベース</h2>
           <p class='text-zinc-800 mb-5'>新潟県のオープンデータを中心としたデータベースです。</p>
           <div class='flex gap-2'>
             <a
