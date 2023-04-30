@@ -4,11 +4,12 @@
 
 import config from './deno.json' assert { type: 'json' }
 import * as $0 from './routes/_404.tsx'
-import * as $1 from './routes/index.tsx'
-import * as $2 from './routes/news/[slug].tsx'
-import * as $3 from './routes/population.tsx'
-import * as $4 from './routes/stocks.tsx'
-import * as $5 from './routes/test.tsx'
+import * as $1 from './routes/_app.tsx'
+import * as $2 from './routes/index.tsx'
+import * as $3 from './routes/news/[slug].tsx'
+import * as $4 from './routes/population.tsx'
+import * as $5 from './routes/stocks.tsx'
+import * as $6 from './routes/test.tsx'
 import * as $$0 from './islands/CityList.tsx'
 import * as $$1 from './islands/Counter.tsx'
 import * as $$2 from './islands/StockList.tsx'
@@ -16,11 +17,12 @@ import * as $$2 from './islands/StockList.tsx'
 const manifest = {
   routes: {
     './routes/_404.tsx': $0,
-    './routes/index.tsx': $1,
-    './routes/news/[slug].tsx': $2,
-    './routes/population.tsx': $3,
-    './routes/stocks.tsx': $4,
-    './routes/test.tsx': $5,
+    './routes/_app.tsx': $1,
+    './routes/index.tsx': $2,
+    './routes/news/[slug].tsx': $3,
+    './routes/population.tsx': $4,
+    './routes/stocks.tsx': $5,
+    './routes/test.tsx': $6,
   },
   islands: {
     './islands/CityList.tsx': $$0,

@@ -7,6 +7,13 @@ import presetTailWind from 'twind-preset-tailwind'
 export default {
   ...defineConfig({
     presets: [presetAutoPrefix(), presetTailWind()],
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: 'Poppins, Noto Sans JP',
+        },
+      },
+    },
   }),
   selfURL: import.meta.url,
 } as Options
