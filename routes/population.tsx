@@ -30,7 +30,7 @@ export default function Page({ data }: PageProps) {
       <div class='mt-10 max-w-5xl mx-auto'>
         <main class='mx-5'>
           <h1 class='text-4xl mb-5 font-bold'>市町村別人口総数</h1>
-          <div class='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-2'>
+          <div class='grid lg:grid-cols-7 md:grid-cols-6 sm:grid-cols-4 grid-cols-3 gap-2'>
             <PopulationCard name='市町村名' population='人口総数' />
             {articles.map((article: { city_name: string; total_population: string }) => (
               <PopulationCard

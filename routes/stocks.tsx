@@ -30,7 +30,7 @@ export default function Page({ data }: PageProps) {
       <div class='mt-10 max-w-5xl mx-auto'>
         <main class='mx-5'>
           <h1 class='text-4xl mb-5 font-bold'>新潟県の上場企業</h1>
-          <div class='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-2'>
+          <div class='grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 gap-2'>
             <StockCard name='企業名' ticker='証券コード' city='市町村' />
             {articles.map((
               article: { company_name: string; ticker_symbol: string; company_city: string },
